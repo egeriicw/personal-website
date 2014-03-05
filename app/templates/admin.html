@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--Font thanks to Font Awesome - http://fortawesome.github.com/Font-Awesome-->
+<html lang="en-US">
+
+<head>
+    <title>
+        Bill Eger
+    </title>
+
+    <style>
+    
+    body {
+    	background: #ffffff;
+    	opacity: 0.9;
+    }
+
+    #content {
+    	background: url("http://energychallenge.energy.gov/community-library/accounts/91/915686/background-data.jpeg") repeat scroll center 0;
+    	height:300px;
+    	width:500px;
+    	display:block;
+    	margin-top: 300px;
+    	border: 1px solid #2E2E2E;
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="content">
+
+
+    <form name="redirect">
+        <center>
+            <font face="Arial">
+                <b>You will be redirected to the script in<br><br>
+                <input type="text" size="3" name="redirect2"> seconds</b>
+            </font>
+        </center>
+
+    </form>
+
+    </div>
+
+    <script>
+    <!--
+
+    /*
+Count down then redirect script
+By JavaScript Kit (http://javascriptkit.com)
+Over 400+ free scripts here!
+*/
+
+    //change below target URL to your own
+    var targetURL = "/"
+    //change the second to start counting down from
+    var countdownfrom = 10
+
+
+    var currentsecond = document.redirect.redirect2.value = countdownfrom + 1
+
+        function countredirect() {
+            if (currentsecond != 1) {
+                currentsecond -= 1
+                document.redirect.redirect2.value = currentsecond
+            } else {
+                window.location = targetURL
+                return
+            }
+            setTimeout("countredirect()", 1000)
+        }
+
+    countredirect()
+    //-->
+    </script>
+</body>
+
+</html>
